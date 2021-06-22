@@ -1,0 +1,15 @@
+
+.btn {
+    border: none;
+    background-color: inherit;
+    padding: 14px 28px;
+    font-size: 8px;
+    cursor: pointer;
+    display: inline-block;
+  }
+  .btn:hover {
+      background: #eee;
+      text-decoration: underline;
+      border-bottom: solid 1px orangered;}
+
+  
