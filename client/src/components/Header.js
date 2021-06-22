@@ -3,11 +3,13 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import { Component } from 'react/cjs/react.production.min';
 
 
 
-  export default function Header() {
-    return (
+class Header extends Component {
+    render() {
+      return(
       <div style={{ flexGrow: 1}}>
         <AppBar position="static">
           <Toolbar>
@@ -21,4 +23,7 @@ import Button from '@material-ui/core/Button';
         </AppBar>
       </div>
     );
+      }
   }
+
+  export default Header;
