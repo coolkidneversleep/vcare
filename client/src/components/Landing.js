@@ -3,8 +3,8 @@ import { Component } from 'react/cjs/react.production.min';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import '../style/landing.scss'
-class Landing extends Component {
-    render() {
+
+const Landing = () => {
         return (
             <div style={{ paddingTop: 14 }}>
                 <Grid
@@ -28,7 +28,6 @@ class Landing extends Component {
                 </Grid>
             </div>
         );
-    }
 }
 
 export default Landing;

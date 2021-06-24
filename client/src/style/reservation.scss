@@ -1,0 +1,82 @@
+@use 'color';
+.card{
+    background: color.$primary-05;
+    width: 600px;
+    height: 600px;
+    border-radius: 30px;
+    padding: 40px;
+}
+.back_btn{
+    color: color.$primary-02;
+
+}
+.next.card{
+    background-color: color.$primary-03;
+}
+.MuiStepIcon-root.MuiStepIcon-completed {
+    color:#FF9E00 !important;
+}
+
+.MuiStepIcon-root.MuiStepIcon-active{
+    color: #AAABAD !important;
+}
+
+.MuiStepIcon-text{
+    fill: #fff !important;
+}
+
+.css-1dfqaoe-MuiStepLabel-label.Mui-active {
+    color: color.$neutral-02 !important;
+    font-weight: 400 !important;
+}
+
+.css-1dfqaoe-MuiStepLabel-label.MuiStepLabel-completed {
+    color: color.$neutral-01 !important;
+    font-weight: 450 !important;
+}
+
+.css-1u2oq74{
+    background-color: color.$primary-05;
+}
+
+.css-1gug9vn.Mui-selected {
+    color: #ffff !important;
+    background-color: #FF9E00;
+}
+
+.css-d9oaum-MuiSelect-select-MuiInputBase-input-MuiFilledInput-input.MuiSelect-select {
+    width: 380px;
+    background-color: #ffff;
+}
+
+.css-lmhby0-MuiInputBase-root-MuiFilledInput-root {
+    color: color.$primary-02;
+}
+
+
+// .css-klo4wo-MuiCalendarPicker-viewTransitionContainer {
+//     display: block;
+//     position: relative;
+//     overflow-y: auto;
+//     background-color: #ffff;
+//     padding: 30px;
+//     padding-top: 0px;
+// }
+
+// .css-8v7him {
+//     background-color: #ffff;
+//     margin-top: 30px;
+//     margin-bottom: 0px;
+//     padding-top: 20px;
+// }
+
+// .css-3ok8xw {
+//     background-color: color.$primary-05;
+// }
+
+// .css-s8aszu {
+//     background-color: color.$primary-05;
+// }
+// .css-1u2oq74{
+//     background-color: color.$primary-05;
+// }

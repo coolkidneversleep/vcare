@@ -5,6 +5,7 @@ import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from '../theme'
 import Landing  from './Landing';
+import Reservation from './Reservation';
 
 class App extends Component {
     render() {
@@ -15,6 +16,7 @@ class App extends Component {
                 <div>
                     <Header />
                     <Route exact path="/" component={Landing} />
+                    <Route exact path="/reservation" component={Reservation} />
                 </div>
             </BrowserRouter>
             </ThemeProvider>
