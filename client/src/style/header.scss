@@ -1,0 +1,28 @@
+@use 'color';
+.btn {
+    color: color.$neutral-02;
+    border: none;
+    background-color: inherit;
+    padding: 14px 28px;
+    font-size: 12px;
+    cursor: pointer;
+    display: inline-block;
+    text-transform: capitalize;
+}
+
+.btn:hover {
+    color: color.$neutral-01;
+    background: #eee;
+    border-bottom: solid 1px color.$accent-01;
+}
+
+.nav{
+    min-height: 56px;
+}
+
+.logo{
+    color: color.$primary-01;
+    flex-grow: 1;
+}
+
+
