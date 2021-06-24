@@ -6,7 +6,7 @@
     padding-top:0;
     padding-bottom:0;
     font-weight: 500;
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-family: "Roboto","Helvetica","Arial",sans-serif;
 }
 .signin_text{
@@ -22,8 +22,8 @@
 .signin_btn{
     display: flex;
     align-items: center;
-    border-radius: 15px;
-    width: 300;
+    border-radius: 18px;
+    width: 500;
     background-color: white;
     border-style: solid;
     border: 1px solid color.$neutral-05;
@@ -32,6 +32,10 @@
     padding: 2px 40px;
     padding-left: 45px;
     margin-top: 20px;
+}
+.signin_btn:hover{
+    color: #eee;
+    background: color.$neutral-05;
 }
 
 .google_img{
