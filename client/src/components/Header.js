@@ -11,7 +11,7 @@ const Header = () => {
     <div className="nav" style={{ flexGrow: 1, margin: 0, marginTop: 12 }}>
 
         <Toolbar>
-          <Typography variant="h6" className="logo" style={{paddingLeft: 50}}>
+          <Typography style={{fontWeight:"bolder"}} variant="h5" className="logo" style={{paddingLeft: 50}}>
             V CARE
           </Typography>
           <button className="btn">Home</button>
