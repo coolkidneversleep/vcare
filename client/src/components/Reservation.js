@@ -8,6 +8,7 @@ import '../style/reservation.scss'
 import './StaticDatePicker'
 import StaticDatePickerDemo from './StaticDatePicker';
 import SelectLocation from './SelectLocation';
+import Confirmation from './Confirmation';
 
 function getSteps() {
     return ['select date and time ', 'Select Location', 'Confirmation'];
@@ -23,7 +24,9 @@ function getStepContent(stepIndex) {
             <SelectLocation />
         );
       case 2:
-        return 'This is the bit I really care about!';
+        return(
+            <Confirmation />
+        );
       default:
         return 'Unknown stepIndex';
     }
@@ -63,7 +66,7 @@ const Reservation = () => {
                     ) : (
                         <div>
                             <Typography style={{padding: 40}}>{getStepContent(activeStep)}</Typography>
-                            <div>
+                            <div >
                                 <Button
                                     disabled={activeStep === 0}
                                     onClick={handleBack}
