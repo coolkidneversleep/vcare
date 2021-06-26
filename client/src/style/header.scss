@@ -25,5 +25,16 @@
     flex-grow: 1;
     font-weight: bolder;
 }
+.signout_btn{
+    color: #ffff;
+    border: none;
+    background-color: color.$primary-02;
+    padding: 14px 28px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: capitalize;
+    border-radius: 20px;
+}
 
 
