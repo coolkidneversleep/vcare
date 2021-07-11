@@ -6,8 +6,14 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from '../theme'
 import Landing  from './Landing';
 import Reservation from './Reservation';
+import * as actions from '../actions';
+import { connect } from 'react-redux';
 
 class App extends Component {
+    componentDidMount(){
+        this.props.fetchUser();
+    }
+    
     render() {
         return(
             <ThemeProvider theme={theme}>
@@ -20,8 +26,8 @@ class App extends Component {
                 </div>
             </BrowserRouter>
             </ThemeProvider>
-        )
+        );
     }
 }
 
-export default App;
+export default connect(null, actions)(App);
