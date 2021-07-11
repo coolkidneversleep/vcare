@@ -27,7 +27,7 @@ class Header extends Component {
             </Typography>
             <Link to='/'><button className="btn" >Home</button></Link>
             <Link to='/reservation'><button className="btn" >Reservation</button></Link>
-            <button className="signout_btn">Sign Out</button>
+            <a href="/api/logout"><button className="signout_btn">Sign Out</button></a>
           </Toolbar>
           
         );
