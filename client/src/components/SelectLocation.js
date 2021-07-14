@@ -14,7 +14,8 @@ const SelctionLocation = () => {
     };
     const handleChangeVaccine = (event) => {
         setVaccine(event.target.value);
-    };
+    }
+
     return (
         <div>
             <div style={{paddingTop: 40, paddingBottom: 20}}>
@@ -46,9 +47,9 @@ const SelctionLocation = () => {
                     <MenuItem value="">
                         <em>None</em>
                     </MenuItem>
-                    <MenuItem value={"Pfizer"}>Bangkok</MenuItem>
-                    <MenuItem value={"Sinovac"}>Chonburi</MenuItem>
-                    <MenuItem value={"Moderna"}>Chiangmai</MenuItem>
+                    <MenuItem value={"Pfizer"}>Pfizer</MenuItem>
+                    <MenuItem value={"Sinovac"}>Sinovac</MenuItem>
+                    <MenuItem value={"Moderna"}>Moderna</MenuItem>
                 </Select>
             </FormControl>
         </div>
