@@ -5,15 +5,14 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import '../style/reservation.scss'
 
-const SelctionLocation = () => {
-    const [location, setLocation] = React.useState('');
-    const [vaccine, setVaccine] = React.useState('');
+const SelctionLocation = ({location, vaccine, changeLocation, changeVaccine}) => {
+    
 
     const handleChange = (event) => {
-        setLocation(event.target.value);
+        changeLocation(event.target.value);
     };
     const handleChangeVaccine = (event) => {
-        setVaccine(event.target.value);
+        changeVaccine(event.target.value);
     }
 
     return (
@@ -27,9 +26,7 @@ const SelctionLocation = () => {
                     value={location}
                     onChange={handleChange}
                 >
-                    <MenuItem value="">
-                        <em>None</em>
-                    </MenuItem>
+
                     <MenuItem value={"Bangkok"}>Bangkok</MenuItem>
                     <MenuItem value={"Chonburi"}>Chonburi</MenuItem>
                     <MenuItem value={"Chiangmai"}>Chiangmai</MenuItem>
@@ -44,9 +41,6 @@ const SelctionLocation = () => {
                     value={vaccine}
                     onChange={handleChangeVaccine}
                 >
-                    <MenuItem value="">
-                        <em>None</em>
-                    </MenuItem>
                     <MenuItem value={"Pfizer"}>Pfizer</MenuItem>
                     <MenuItem value={"Sinovac"}>Sinovac</MenuItem>
                     <MenuItem value={"Moderna"}>Moderna</MenuItem>

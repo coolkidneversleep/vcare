@@ -5,21 +5,22 @@ import LocalizationProvider from '@material-ui/lab/LocalizationProvider';
 import StaticDatePicker from '@material-ui/lab/StaticDatePicker';
 import '../style/reservation.scss'
 
-const StaticDatePickerDemo = () => {
-  const [value, setValue] = React.useState(new Date());
-
+const StaticDatePickerDemo = ({val, changeVal}) => {
   return (
+    <div>
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <StaticDatePicker
-        displayStaticWrapperAs="desktop"
+        name="date"
+        orientation="landscape"
         openTo="year"
-        value={value}
-        onChange={(newValue) => {
-          setValue(newValue);
+        value={val}
+        onChange={(value) => {
+          changeVal(value);
         }}
         renderInput={(params) => <TextField {...params} />}
       />
     </LocalizationProvider>
+    </div>
   );
 }
 export default StaticDatePickerDemo

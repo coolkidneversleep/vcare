@@ -13,29 +13,26 @@ import Confirmation from './Confirmation';
 function getSteps() {
     return ['select date and time ', 'Select Location', 'Confirmation'];
 }
-function getStepContent(stepIndex) {
-    switch (stepIndex) {
-      case 0:
-        return(
-            <StaticDatePickerDemo />
-        );
-      case 1:
-        return(
-            <SelectLocation />
-        );
-      case 2:
-        return(
-            <Confirmation />
-        );
-      default:
-        return 'Unknown stepIndex';
-    }
-  }
+
 
 const Reservation = () => {
     const [activeStep, setActiveStep] = React.useState(0);
+    const [location, setLocation] = React.useState('');
+    const [vaccine, setVaccine] = React.useState('');
+    const [date, setDate] = React.useState("");
     const steps = getSteps();
 
+    const changeLocation = (location) => {
+        setLocation(location)
+    }
+    
+    const chageVaccine = (vaccine) => {
+        setVaccine(vaccine)
+    }
+    
+    const changeDate = (val) => {
+        setDate(val)
+    }
     const handleNext = () => {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
     };
@@ -47,6 +44,26 @@ const Reservation = () => {
     const handleReset = () => {
         setActiveStep(0);
     };
+
+    function getStepContent(stepIndex) {
+        switch (stepIndex) {
+          case 0:
+            return(
+                <StaticDatePickerDemo val={date} changeVal={changeDate}/>
+            );
+          case 1:
+            return(
+                <SelectLocation location={location} vaccine={vaccine} changeLocation={changeLocation} changeVaccine={chageVaccine}/>
+            );
+          case 2:
+            return(
+                <Confirmation reservationInfo="this is your reservation" date={date} location={location} vaccine={vaccine} />
+            );
+          default:
+            return 'Unknown stepIndex';
+        }
+      }
+    
     return (
         <div style={{ display: 'flex', justifyContent: 'center', paddingTop: 50 }}>
             <div className="card">
@@ -65,7 +82,7 @@ const Reservation = () => {
                         </div>
                     ) : (
                         <div>
-                            <Typography style={{padding: 40}}>{getStepContent(activeStep)}</Typography>
+                            <Typography style={{padding: 30}}>{getStepContent(activeStep)}</Typography>
                             <div >
                                 <Button
                                     disabled={activeStep === 0}
