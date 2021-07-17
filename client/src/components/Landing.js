@@ -4,12 +4,11 @@ import Typography from '@material-ui/core/Typography';
 import '../style/landing.scss'
 import '../style/header.scss'
 import { connect } from 'react-redux';
-import { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-class Landing extends Component {
-    renderContent(){
-        switch (this.props.auth){
+const Landing = (props) => {
+    const renderContent = () => {
+        switch (props.auth){
           case null:
             return ;
           case false:
@@ -32,9 +31,6 @@ class Landing extends Component {
             );
         }
       }
-
-    render(){
-
         return (
             <div style={{ paddingTop: 14 }}>
                 <Grid
@@ -50,12 +46,11 @@ class Landing extends Component {
                     <h2 className="welcome_text">Prevent Better</h2>
                     <h2 className="welcome_text">Than Care </h2>
                     </div>
-                    {this.renderContent()}
+                    {renderContent()}
                     </Grid>
                 </Grid>
             </div>
         );
-    }
 }
 function mapStateToProps({ auth }) {
     return { auth };

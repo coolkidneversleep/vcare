@@ -21,7 +21,7 @@ const Reservation = () => {
     const [vaccine, setVaccine] = React.useState('');
     const [date, setDate] = React.useState("");
     const steps = getSteps();
-
+    
     const changeLocation = (location) => {
         setLocation(location)
     }
@@ -57,7 +57,7 @@ const Reservation = () => {
             );
           case 2:
             return(
-                <Confirmation reservationInfo="this is your reservation" date={date} location={location} vaccine={vaccine} />
+                <Confirmation date={date} location={location} vaccine={vaccine} />
             );
           default:
             return 'Unknown stepIndex';
