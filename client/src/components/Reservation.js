@@ -9,6 +9,7 @@ import './StaticDatePicker'
 import StaticDatePickerDemo from './StaticDatePicker';
 import SelectLocation from './SelectLocation';
 import Confirmation from './Confirmation';
+import axios from 'axios';
 
 function getSteps() {
     return ['select date and time ', 'Select Location', 'Confirmation'];
@@ -25,11 +26,9 @@ const Reservation = () => {
     const changeLocation = (location) => {
         setLocation(location)
     }
-    
     const chageVaccine = (vaccine) => {
         setVaccine(vaccine)
     }
-    
     const changeDate = (val) => {
         setDate(val)
     }
@@ -63,6 +62,14 @@ const Reservation = () => {
             return 'Unknown stepIndex';
         }
       }
+
+      function getAllReservation(){
+          axios.post('/api/reservation', { date: date, location: location, vaccine: vaccine}).then((res) => {
+            console.log(res.data)
+            handleNext()
+            }
+          )
+      }
     
     return (
         <div style={{ display: 'flex', justifyContent: 'center', paddingTop: 50 }}>
@@ -77,8 +84,7 @@ const Reservation = () => {
                 <div>
                     {activeStep === steps.length ? (
                         <div>
-                            <Typography>All steps completed</Typography>
-                            <Button onClick={handleReset}>Reset</Button>
+                            <Typography>Thank you for your attention !</Typography>
                         </div>
                     ) : (
                         <div>
@@ -92,7 +98,7 @@ const Reservation = () => {
                                 >
                                     Prev
                                 </Button>
-                                <Button variant="contained" style={{marginLeft:280,backgroundColor:"#3F8EFC", color:"white"}} onClick={handleNext} >
+                                <Button variant="contained" style={{marginLeft:280,backgroundColor:"#3F8EFC", color:"white"}} onClick={activeStep === steps.length - 1 ? getAllReservation :handleNext} >
                                     {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
                                 </Button>
                             </div>

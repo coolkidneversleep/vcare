@@ -3,7 +3,10 @@ const { Schema } = mongoose;
 
 const userSchema = new Schema({
   googleId: String,
-  name: String
+  name: String,
+  date: String,
+  location: String,
+  vaccine: String
 });
 
 mongoose.model('users', userSchema);
