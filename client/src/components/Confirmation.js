@@ -8,14 +8,15 @@ const Confirmation = ({date, location, vaccine, auth}) => {
     const month = date.getMonth()
     const year = date.getFullYear()
     return(
-        <div style={{display: 'flex', flexFlow: 'column',justifyContent: 'center'}}>
-            <div className="small_card"style={{display: 'flex', flexFlow: 'column',justifyContent: 'center'}}>
+        <div style={{display: 'flex', flexFlow: 'column',alignItems: 'center'}}>
+            <div className="small_card"style={{display: 'flex', flexFlow: 'column',alignItems: 'center'}}>
                 <h3 className="confirm_text">Vaccine Reservation</h3>
-            <div>{auth.name}</div>
-            <div>{day+"/"+month+"/"+year}</div>
-            <div>{location}</div>
-            <div>{vaccine}</div>
-            
+                <div style={{display:'flex', flexFlow:'column',alignItems:'start'}}>
+                <div>Name: {auth.name}</div>
+                <div>Date: {day+"/"+month+"/"+year}</div>
+                <div>Location: {location}</div>
+                <div>Vaccine: {vaccine}</div>
+                </div>
             </div>
         </div>
     );

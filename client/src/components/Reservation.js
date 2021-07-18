@@ -83,8 +83,11 @@ const Reservation = () => {
                 </Stepper>
                 <div>
                     {activeStep === steps.length ? (
-                        <div>
-                            <Typography>Thank you for your attention !</Typography>
+                        <div style={{display: 'flex', flexFlow: 'column',alignItems: 'center'}}>
+                            <div className="small_card"style={{display: 'flex', flexFlow: 'column',alignItems: 'center', justifyContent: "center", paddingBottom: '27px'}}>
+                                <b classname="finish_text">Thank you for your attention !</b>
+                                <div classname="finish_text" style={{fontSize: '14px'}}>Please come on the specified date.</div>
+                            </div>
                         </div>
                     ) : (
                         <div>

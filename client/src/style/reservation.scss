@@ -9,19 +9,30 @@
 .small_card{
     padding-left: 40px;
     padding-right: 40px;
+    padding-top: 27px;
     width:330px;
     height:259px;
     background-color: #ffff;
     border-radius: 15px;
     display: flex;
     flex-flow: 'column';
-    justify-content: center;
+    justify-content: start;
+    margin-top: 55px;
 }
 .confirm_text{
     font-family: "Roboto","Helvetica","Arial",sans-serif;
-    font-weight: 500;
+    font-weight: 800;
     color: color.$neutral-01;
     
+}
+.finish_text{
+    padding: 20px;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-weight: 500;
+    color: #FF9E00 !important;
+}
+.confirm_text .info_text{
+    margin: 0px;
 }
 .back_btn{
     color: color.$primary-02;
@@ -70,30 +81,3 @@
     color: color.$primary-02;
 }
 
-
-// .css-klo4wo-MuiCalendarPicker-viewTransitionContainer {
-//     display: block;
-//     position: relative;
-//     overflow-y: auto;
-//     background-color: #ffff;
-//     padding: 30px;
-//     padding-top: 0px;
-// }
-
-// .css-8v7him {
-//     background-color: #ffff;
-//     margin-top: 30px;
-//     margin-bottom: 0px;
-//     padding-top: 20px;
-// }
-
-// .css-3ok8xw {
-//     background-color: color.$primary-05;
-// }
-
-// .css-s8aszu {
-//     background-color: color.$primary-05;
-// }
-// .css-1u2oq74{
-//     background-color: color.$primary-05;
-// }
